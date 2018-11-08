@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.haomai.ywj.yobook.ProtectActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar_pro"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPower">
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/mainlist"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#fff"
+                android:cacheColorHint="#00000000"
+                android:divider="#ffebebeb"
+                android:dividerHeight="1px"
+                android:fastScrollEnabled="true"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+
+            <ListView
+                android:id="@+id/morelist"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#fff"
+                android:cacheColorHint="#00000000"
+                android:divider="#ffebebeb"
+                android:dividerHeight="1px"
+                android:fastScrollEnabled="true"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#cccccc"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="文件名"
+                    android:textColor="@color/colorPower"
+                    android:textSize="25px"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPower"></LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:text="文件路径"
+                    android:textColor="@color/colorPower"
+                    android:textSize="25px"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <include layout="@layout/line_white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:text="图纸1"-->
+
+                    <!--android:gravity="center"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_pdf"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="3"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:text="D://"-->
+                    <!--android:gravity="center"/>-->
+
+                <ListView
+                    android:id="@+id/filelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    tools:context="com.haomai.ywj.yobook.fragment.MainFragment"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_main"></include>
+
+    <include layout="@layout/line"></include>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:fadeScrollbars="false"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.haomai.ywj.yobook.api.view.CustomRoundAngleImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@mipmap/yccc"
+                roundiv:left_bottom_radius="10dp"
+                roundiv:left_top_radius="10dp"
+                roundiv:right_bottom_radius="10dp"
+                roundiv:right_top_radius="10dp"
+                android:scaleType="centerCrop"
+                />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:background="@color/colorPower"-->
+                <!--android:text="宜昌变电检修管理平台"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="50px"-->
+                <!--android:letterSpacing="1.1"-->
+                <!--android:gravity="center"/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保护类型"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tv_pro_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="收起"
+                    android:textColor="#777777"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <com.haomai.ywj.yobook.api.view.CustomGridView
+                android:id="@+id/main_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4">
+
+            </com.haomai.ywj.yobook.api.view.CustomGridView>
+
+
+        </LinearLayout>
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>
